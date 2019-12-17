@@ -78,7 +78,7 @@ For the markers used on the map, we used the image data provided by Skiddle
 
 As we worked in pairs from one laptop for the duration, we sat side by side and worked on every step together 
 <br />
-In previous tasks we would work with isting data onto an index page as a list.  The above code snippet shows our dropdown listed data that populates when an event is clicked
+In previous tasks we would work with listing data onto an index page as a list.  The above code snippet shows our dropdown listed data that populates when an event is clicked.  The listed data was set in state so we were able to call it as it was named in the API and render each one using HTML elements semantically.
 
 
 # What would we work on next? #

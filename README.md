@@ -18,7 +18,7 @@ The APIs we used were:
 - *SkiddleAPI* for the gig data
 - *MapBoxGL* to display the events on an interactive map
 
-Built With:
+the project was built with:
 - Reactjs
 - Express
 - Node.js

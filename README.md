@@ -19,7 +19,7 @@ The APIs we used were:
 - *MapBoxGL* to display the events on an interactive map
 
 the project was built with:
-- Reactjs
+- ReactJS
 - Express
 - Node.js
 - SCSS/CSS

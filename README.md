@@ -22,7 +22,48 @@ The APIs we used were:
 
 Deployed and can be found at: gigonamap.herokuapp.com
 
-<a href="https://imgur.com/xURnFuT"><img src="https://i.imgur.com/xURnFuTl.png" title="source: imgur.com" /></a> <a href="https://imgur.com/NzXmEQB"><img src="https://i.imgur.com/NzXmEQBm.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/xURnFuT"><img src="https://i.imgur.com/xURnFuT.png" title="source: imgur.com" /></a>
+
+```return (
+      <>
+        <div className={`container ${this.state.active ? 'container transition' : '' }`}>
+          <p className={numberOfGigs}>{`There are ${this.props.results.length} gigs in your area`}</p>
+          <div className={classes}>
+
+            <h3>{this.state.eventData.eventname}</h3>
+            <p>{this.state.eventData.description}</p>
+            <img className='imgShow' src={this.state.eventData.imageurl}></img>
+            
+            <p>{`Tickets are ${this.state.eventData.entryprice}`}</p>
+            {/* <p>{`Date ${this.state.eventData.date}`}</p> */}
+            
+            <p>{`Doors: ${this.state.openingtimes.doorsopen} - ${this.state.openingtimes.doorsclose}`}</p>
+            <p>{`Last entry is ${this.state.openingtimes.lastentry}`}</p>
+            <a target="blank" href={this.state.eventData.link}>Purchase your ticket Here</a>
+          </div>
+        </div>
+
+        <ReactMapGL {...this.state.viewport} eventData={this.state}
+          onClick={this.handleClick}
+          height={'100vh'}
+          width={'100vw'}
+          mapboxApiAccessToken={process.env.MAPBOX_ACCESS_TOKEN}
+          onViewportChange={(viewport) => this.setState({ viewport })}
+        >
+          {gigs.results.map(i => (
+            <Marker
+              key={i.id}
+              latitude={i.venue.latitude}
+              longitude={i.venue.longitude}
+            >
+              {/* () => this.setState({ eventname: i.eventname }), this.showInfo */}
+              <div {...i} name={i} onClick={() => this.showInfo(i)}>
+                <img className='pin' src={i.imageurl} />
+              </div>
+            </Marker>
+          ))}
+        </ReactMapGL>        
+```
 
 As each event from Skiddle came with a location specified by latitude and longitude, these were used as the required data to render the data onto the map
 <br />

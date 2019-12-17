@@ -18,6 +18,12 @@ The APIs we used were:
 - *SkiddleAPI* for the gig data
 - *MapBoxGL* to display the events on an interactive map
 
+Built With:
+- Reactjs
+- Express
+- Node.js
+- SCSS/CSS
+
 #  The Project #
 
 Deployed and can be found at: gigonamap.herokuapp.com

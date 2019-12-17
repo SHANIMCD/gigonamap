@@ -5,7 +5,7 @@ Duration: 2 days
 
 
 # Task #
-Using ReactJs, build a Frontend web app that uses a 3rd party API of our choice. We had the option to use more than one
+Using ReactJs, build a Frontend web app that uses a 3rd party API of our choice. We had the option to use more than one.
 
 
 # Our Idea #
@@ -71,12 +71,12 @@ Deployed and can be found at: gigonamap.herokuapp.com
         </ReactMapGL>        
 ```
 
-As each event from Skiddle came with a location specified by latitude and longitude, these were used as the required data to render the data onto the map
+As each event from Skiddle came with a location specified by latitude and longitude, these were used as the required data to render the data onto the map.
 <br />
-For the markers used on the map, we used the image data provided by Skiddle
+For the markers used on the map, we used the image data provided by Skiddle.
 
 
-As we worked in pairs from one laptop for the duration, we sat side by side and worked on every step together 
+As we worked in pairs from one laptop for the duration, we sat side by side and worked on every step together. 
 <br />
 In previous tasks we would work with listing data onto an index page as a list.  The above code snippet shows our dropdown listed data that populates when an event is clicked.  The listed data was set in state so we were able to call it as it was named in the API and render each one using HTML elements semantically.
 
